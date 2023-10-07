@@ -1,0 +1,40 @@
+
+
+#######################################################################################################
+
+####  PLease find below parameter description of paramaters in config.yml file
+
+####  input_data_path: Main input data folder containing three sub folders: TrainSet, TestSet, ValSet
+####  train_csv_path : file containing information of class labels of input train files
+####  test_csv_path : file containing information of class labels of input test files
+####  val_csv_path : file containing information of class labels of input val files
+####  model_output_path : output folder path to save best model
+####  model_name : filename of model to be saved as
+####  batch_size : size of batch
+####  target_size : tuple of targe size of input images e.g. (64, 64)
+####  seed : seed number to be used
+####  epochs: number of epochs to be run
+####  class_mode : class mode for model training e.g. "categorical"
+####  weights : initial weights to be used e.g. "imagenet"
+####  input_shape : input shape for the model e.g. (64, 64, 3)
+
+####  Please update the paths as per your own settings.
+
+#######################################################################################################
+
+
+Data:
+  input_data_path : "./data/PAKSEN2_RGB"
+  train_csv_path : "./data/PAKSEN2_RGB/TrainFilenames.csv"
+  val_csv_path : "./data/PAKSEN2_RGB/ValFilenames.csv"
+  test_csv_path : "./data/PAKSEN2_RGB/TestFilenames.csv"
+Model:
+  model_output_path : "./data/paksen2_rgb_trained_model"
+  model_name : "PAKSEN2_RGB_MODEL.hdf5"
+  batch_size : 32
+  target_size : (64, 64)
+  seed : 42
+  epochs: 25
+  class_mode : "categorical"
+  weights : "imagenet"
+  input_shape : (64, 64, 3)
